@@ -21,6 +21,9 @@
     <ClInclude Include="StageClear.h">
       <Filter>Header File</Filter>
     </ClInclude>
+    <ClInclude Include="CandidateKey.h">
+      <Filter>Header File</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

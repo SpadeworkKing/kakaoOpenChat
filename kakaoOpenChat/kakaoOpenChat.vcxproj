@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CandidateKey.h" />
     <ClInclude Include="openchat.h" />
     <ClInclude Include="StageClear.h" />
   </ItemGroup>

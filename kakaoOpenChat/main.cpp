@@ -4,11 +4,12 @@
 
 #include "StageClear.h"
 #include "openchat.h"
+#include "CandidateKey.h"
 
 using namespace std;
 
-
-#define _DEBUG_ 2
+// 1=openchat, 2=StageClear, 3=CandidateKey
+#define _DEBUG_ 3
 
 
 int main(void)
@@ -40,11 +41,47 @@ int main(void)
 
 	v = solution(n,v);
 
+#elif _DEBUG_ == 3	///////////////////////////////////////////// CandidateKey
+
+	vector<vector<string>> doubleV;
+	int result;
+	vector<string> V = { "100", "ryan", "music", "2" };
+	doubleV.push_back(V);
+	V = { "200", "apeach", "math", "2" };
+	doubleV.push_back(V);
+	V = { "300", "tube", "computer", "3" };
+	doubleV.push_back(V);
+	V = { "400", "con", "computer", "4" };
+	doubleV.push_back(V);
+	V = { "500", "muzi", "music", "3" };
+	doubleV.push_back(V);
+	V = { "600", "apeach", "music", "2" };
+	doubleV.push_back(V);
+
+
+
+	result = solution(doubleV);
+
 #endif
 
-	for (int i = 0; i < v.size(); i++)
+// 	for (int i = 0; i < doubleV.size(); i++)
+// 	{
+// 		for (int j = 0; j < V.size(); j++)
+// 		{
+// 			cout << doubleV[i][j]<<" " ;
+// 		}
+// 		cout << endl;
+// 	}
+	
+	/*doubleV[5].pop_back();*/
+	
+	for (int i = 0; i < doubleV.size(); i++)
 	{
-		cout << v[i] << endl;
+		for (int j = 0; j < V.size(); j++)
+		{
+			cout << doubleV[i][j] << " ";
+		}
+		cout << endl;
 	}
 
 	return 0;
